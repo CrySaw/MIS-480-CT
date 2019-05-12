@@ -1,0 +1,26 @@
+-- Table: dwr.dimcustomers1
+
+-- DROP TABLE dwr.dimcustomers1;
+
+CREATE TABLE dwr.dimcustomers1
+(
+    customerid smallint NOT NULL,
+    companyname character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    contactname character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    contacttitle character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    address character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    city character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    region character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    postalcode character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    country character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    phone character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    fax character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    CONSTRAINT "“dimcustomers1”_pkey" PRIMARY KEY (customerid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE dwr.dimcustomers1
+    OWNER to postgres;
