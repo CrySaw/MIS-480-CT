@@ -1,0 +1,22 @@
+-- Table: dwr.dimorders1
+
+-- DROP TABLE dwr.dimorders1;
+
+CREATE TABLE dwr.dimorders1
+(
+    order_id smallint NOT NULL,
+    ship_name character varying(40) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    ship_address character varying(60) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    ship_city character varying(15) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    ship_region character varying(15) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    ship_postal_code character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    ship_country character varying(15) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    CONSTRAINT pk_dimorders1 PRIMARY KEY (order_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE dwr.dimorders1
+    OWNER to postgres;
