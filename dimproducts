@@ -1,0 +1,21 @@
+-- Table: dwr.dimproducts1
+
+-- DROP TABLE dwr.dimproducts1;
+
+CREATE TABLE dwr.dimproducts1
+(
+    product_id smallint NOT NULL,
+    product_name character varying(40) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    supplier_id smallint,
+    category_id smallint,
+    quantity_per_unit character varying(20) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    unit_price real,
+    CONSTRAINT pk_dimproducts1 PRIMARY KEY (product_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE dwr.dimproducts1
+    OWNER to postgres;
