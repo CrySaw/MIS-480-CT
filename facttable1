@@ -1,0 +1,21 @@
+-- Table: dwr.facttable1
+
+-- DROP TABLE dwr.facttable1;
+
+CREATE TABLE dwr.facttable1
+(
+    date character(8) COLLATE pg_catalog."default" NOT NULL,
+    product_id smallint NOT NULL,
+    order_id smallint NOT NULL,
+    customerid smallint NOT NULL,
+    employee_id smallint NOT NULL,
+    unit_price integer NOT NULL DEFAULT 0,
+    quantity_per_unit character varying COLLATE pg_catalog."default" NOT NULL DEFAULT 0
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE dwr.facttable1
+    OWNER to postgres;
