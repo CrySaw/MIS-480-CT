@@ -1,0 +1,32 @@
+-- Table: dwr.dimemployees1
+
+-- DROP TABLE dwr.dimemployees1;
+
+CREATE TABLE dwr.dimemployees1
+(
+    employee_id smallint NOT NULL,
+    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    title character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    title_of_courtesy character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    birth_date date,
+    hire_date date,
+    address character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    city character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    region character varying(50) COLLATE pg_catalog."default" DEFAULT 'N/A'::bpchar,
+    postal_code character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    country character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    home_phone character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    extension character varying(50) COLLATE pg_catalog."default" NOT NULL DEFAULT 'N/A'::bpchar,
+    photo bytea,
+    notes text COLLATE pg_catalog."default",
+    reports_to smallint,
+    CONSTRAINT "“dimemployees1”_pkey" PRIMARY KEY (employee_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE dwr.dimemployees1
+    OWNER to postgres;
